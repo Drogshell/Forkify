@@ -1,0 +1,16 @@
+{
+  "name": "forkify",
+  "version": "0.0.1",
+  "description": "A simple website to find and save your favourite recipes",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Trevin Rambukpotha",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.2",
+    "parcel": "^2.13.2",
+    "sass": "^1.81.0"
+  }
+}
