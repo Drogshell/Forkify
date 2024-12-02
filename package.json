@@ -1,6 +1,6 @@
 {
   "name": "forkify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple website to find and save your favourite recipes",
   "scripts": {
     "start": "parcel index.html",
@@ -12,5 +12,9 @@
     "@parcel/transformer-sass": "^2.13.2",
     "parcel": "^2.13.2",
     "sass": "^1.81.0"
+  },
+  "dependencies": {
+    "core-js": "^3.39.0",
+    "regenerator-runtime": "^0.14.1"
   }
 }
