@@ -1,6 +1,6 @@
 {
   "name": "forkify",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A simple website to find and save your favourite recipes",
   "scripts": {
     "start": "parcel index.html",
