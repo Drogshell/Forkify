@@ -46,14 +46,14 @@ class paginationView extends View {
 		// Middle pages
 		if (curPage < numPages) {
 			return `
-			<button data-goto="${curPage - 1}" class="btn--inline pagination__btn--prev">
+			<button class="btn--inline pagination__btn--prev" data-goto="${curPage - 1}">
 				<svg class="search__icon">
 					<use href="${icons}#icon-arrow-left"></use>
 				</svg>
 				<span>Page ${curPage - 1}</span>
 			</button>
 			
-			<button data-goto="${curPage + 1}" class="btn--inline pagination__btn--next">
+			<button class="btn--inline pagination__btn--next" data-goto="${curPage + 1}">
 				<span>Page ${curPage + 1}</span>
 				<svg class="search__icon">
 					<use href="${icons}#icon-arrow-right"></use>
