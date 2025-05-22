@@ -95,6 +95,32 @@ export const removeBookmark = function (id) {
 	persistBookmarks();
 };
 
+export const uploadRecipe = async function (newRecipe) {
+	try {
+		const ingredients = Object.entries(newRecipe)
+			.filter(entry => entry[0].startsWith('ingredient') && entry[1] !== '')
+			.map(ingredient => {
+				const ingredientsArr = ingredient[1].replaceAll(' ', '').split(',');
+
+				if (ingredientsArr.length !== 3) throw new Error('Wrong Ingredient Format!');
+
+				const [quantity, unit, description] = ingredientsArr;
+				return { quantity: quantity ? +quantity : null, unit, description };
+			});
+		const recipe = {
+			title: newRecipe.title,
+			source_url: newRecipe.sourceUrl,
+			image_url: newRecipe.image,
+			publisher: newRecipe.publisher,
+			cooking_time: +newRecipe.cookingTime,
+			servings: +newRecipe.servings,
+			ingredients,
+		};
+	} catch (e) {
+		throw e;
+	}
+};
+
 const init = function () {
 	const storage = localStorage.getItem('bookmarks');
 	if (storage) {
